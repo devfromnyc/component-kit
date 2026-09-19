@@ -22,16 +22,16 @@ describe("PreviewPage", () => {
   });
 
   it("keeps the playground collapsed by default", () => {
-    renderPreview("stub");
+    renderPreview("hero");
     expect(screen.queryByLabelText(/heading/i)).not.toBeInTheDocument();
     expect(screen.getByRole("button", { name: /show controls/i })).toBeInTheDocument();
   });
 
   it("edits a text control after opening the panel", async () => {
     const user = userEvent.setup();
-    renderPreview("stub");
+    renderPreview("hero");
     await user.click(screen.getByRole("button", { name: /show controls/i }));
-    const input = screen.getByLabelText(/heading/i);
+    const input = screen.getByLabelText(/^heading$/i);
     await user.clear(input);
     await user.type(input, "Hello");
     expect(input).toHaveValue("Hello");

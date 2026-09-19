@@ -11,8 +11,8 @@ describe("CatalogHome", () => {
         <CatalogHome />
       </MemoryRouter>,
     );
-    expect(screen.getByRole("heading", { name: /stub/i })).toBeInTheDocument();
-    expect(screen.getByText(/temporary registry row/i)).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /hero/i })).toBeInTheDocument();
+    expect(screen.getByText(/full-bleed landing hero/i)).toBeInTheDocument();
   });
 
   it("filters by type chip", async () => {
@@ -23,8 +23,8 @@ describe("CatalogHome", () => {
       </MemoryRouter>,
     );
     await user.click(screen.getByRole("button", { name: /^auth$/i }));
-    expect(screen.queryByRole("heading", { name: /stub/i })).not.toBeInTheDocument();
+    expect(screen.queryByRole("heading", { name: /hero/i })).not.toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: /^all$/i }));
-    expect(screen.getByRole("heading", { name: /stub/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /hero/i })).toBeInTheDocument();
   });
 });
