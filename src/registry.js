@@ -1,6 +1,9 @@
 import { Hero, defaultContent, defaultLayout } from "./kit/marketing/Hero.jsx";
 import { About, defaultContent as aboutDefaultContent } from "./kit/marketing/About.jsx";
 import { Services, defaultContent as servicesDefaultContent } from "./kit/marketing/Services.jsx";
+import { ProcessSteps, defaultContent as processDefaultContent } from "./kit/marketing/ProcessSteps.jsx";
+import { TechStack, defaultContent as techStackDefaultContent } from "./kit/marketing/TechStack.jsx";
+import { Faq, defaultContent as faqDefaultContent } from "./kit/marketing/Faq.jsx";
 
 const registry = [
   {
@@ -58,6 +61,51 @@ const registry = [
     component: Services,
     defaults: {
       content: { ...servicesDefaultContent },
+    },
+    controls: [
+      { group: "content", key: "eyebrow", label: "Eyebrow", kind: "text" },
+      { group: "content", key: "heading", label: "Heading", kind: "text" },
+      { group: "content", key: "subheading", label: "Subheading", kind: "textarea" },
+    ],
+  },
+  {
+    id: "process-steps",
+    name: "Process Steps",
+    type: "marketing",
+    description: "Numbered process timeline with icons, titles, and connecting lines.",
+    component: ProcessSteps,
+    defaults: {
+      content: { ...processDefaultContent },
+    },
+    controls: [
+      { group: "content", key: "eyebrow", label: "Eyebrow", kind: "text" },
+      { group: "content", key: "heading", label: "Heading", kind: "text" },
+      { group: "content", key: "subheading", label: "Subheading", kind: "textarea" },
+    ],
+  },
+  {
+    id: "tech-stack",
+    name: "Tech Stack",
+    type: "marketing",
+    description: "Dual-row CSS marquee of technology chips with reduced-motion wrap.",
+    component: TechStack,
+    defaults: {
+      content: { ...techStackDefaultContent },
+    },
+    controls: [
+      { group: "content", key: "eyebrow", label: "Eyebrow", kind: "text" },
+      { group: "content", key: "heading", label: "Heading", kind: "text" },
+      { group: "content", key: "subheading", label: "Subheading", kind: "textarea" },
+    ],
+  },
+  {
+    id: "faq",
+    name: "FAQ",
+    type: "marketing",
+    description: "Accordion of common questions with a rotating plus indicator.",
+    component: Faq,
+    defaults: {
+      content: { ...faqDefaultContent },
     },
     controls: [
       { group: "content", key: "eyebrow", label: "Eyebrow", kind: "text" },
