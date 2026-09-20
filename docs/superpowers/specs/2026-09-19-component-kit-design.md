@@ -7,12 +7,12 @@
 
 ## Goal
 
-A private React + Tailwind component workshop that makes freelance UI faster and more consistent for humans and AI. Browse components in a catalog, tune the real knobs in a playground, then copy the file into a client project (or clone the ecommerce template and strip it).
+A React + Tailwind component workshop that makes freelance UI faster and more consistent for humans and AI. Browse components in a catalog, tune the real knobs in a playground, then copy the file into a client project (or clone the ecommerce template and strip it).
 
 ## Constraints
 
 - Completely separate git repository. Not a child of `james-freelance` or any other repo.
-- Private GitHub remote: `gh repo create --private`. No GitHub Pages, no public npm package, no public site.
+- Public GitHub remote: https://github.com/devfromnyc/component-kit. No GitHub Pages, no public npm package.
 - Tech: React 19, Tailwind CSS v4, JavaScript (JSX). Components may be converted to TypeScript per client project.
 - Catalog app: Vite + React + Tailwind (SPA). No Next.js for the catalog.
 - Kit components: plain React + Tailwind. No `next/link`, `next/image`, or other framework-only APIs. Use `<a>` and `<img>` (or a `linkComponent` / `href` prop where a client may swap in Next `Link` later).
@@ -220,7 +220,7 @@ No visual-regression suite and no ecommerce backend tests in v1.
 
 ## Success
 
-- `component-kit` exists as its own private GitHub repo, sibling to `james-freelance`.
+- `component-kit` exists as its own public GitHub repo, sibling to `james-freelance`.
 - `npm run dev` at the repo root shows a filterable card catalog.
 - Clicking a card opens a blank-page preview with a hideable playground that only exposes real knobs.
 - First-wave components render with placeholders and are copy-pasteable JSX + Tailwind.
